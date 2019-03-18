@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "target": "es2017",
+    "rootDir": "./src",
+    "outDir": "./build",
+    "esModuleInterop": true,
+    "allowUnreachableCode": true,
+    "allowUnusedLabels": true,
+    "noUnusedLocals": true
+  },
+  "exclude": ["node_modules", "packages", "dist", "build"]
+}

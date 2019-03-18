@@ -1,0 +1,42 @@
+{
+  "name": "@qianmi/translator",
+  "version": "0.0.3",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "http://registry.npm.qianmi.com"
+  },
+  "dependencies": {
+    "@koa/cors": "^2.2.2",
+    "@qianmi/bugatti-notify": "0.0.2",
+    "debug": "^3.1.0",
+    "fs-extra": "^7.0.0",
+    "interpret-dubbo2js": "0.0.22",
+    "klaw": "^3.0.0",
+    "koa": "^2.5.1",
+    "koa-body": "^4.0.3",
+    "koa-ejs": "^4.1.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "path": "^0.12.7",
+    "request": "^2.87.0",
+    "typescript": "^3.1.6",
+    "xml2js": "^0.4.19"
+  },
+  "devDependencies": {
+    "@types/debug": "^0.0.30",
+    "@types/fs-extra": "^5.0.4",
+    "@types/koa": "^2.0.46",
+    "@types/koa-router": "^7.0.28",
+    "@types/node": "^10.3.4",
+    "@types/request": "^2.47.1",
+    "@types/xml2js": "^0.4.3"
+  },
+  "scripts": {
+    "startup": "npm install --registry=http://registry.npm.qianmi.com && pm2  start ./build/app.js --name translator --node-args='--harmony' -i 1 -k 50000",
+    "shutdown": "pm2 delete translator -k 50000",
+    "postpublish": "npx bugattiNotify",
+    "start": "ts-node ./src/app.ts",
+    "debug": "ts-node --inspect ./src/app.ts",
+    "clean": "rm -rf ./lib ./providers"
+  }
+}

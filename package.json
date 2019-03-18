@@ -1,0 +1,55 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "jest --watch -u"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.dev.qianmi.com/QMFE/shop-fe.git"
+  },
+  "author": "qmfe",
+  "license": "ISC",
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules",
+      "<rootDir>/packages/dubbo/src/__tests__/providers",
+      "<rootDir>/examples",
+      "<rootDir>/java"
+    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
+  },
+  "prettier": {
+    "bracketSpacing": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "devDependencies": {
+    "lerna": "^2.5.1",
+    "@types/debug": "^0.0.30",
+    "@types/jest": "^21.1.6",
+    "@types/node": "^8.0.51",
+    "@types/node-zookeeper-client": "^0.2.6",
+    "@types/js-to-java": "2.4.0",
+    "@types/koa-compose": "3.2.2",
+    "@types/dateformat": "1.0.1",
+    "@types/ip": "0.0.30",
+    "@types/uuid": "3.4.3",
+    "jest": "^21.2.1",
+    "ts-jest": "^21.2.2",
+    "typescript": "^2.9.2",
+    "uuid": "3.2.1"
+  }
+}

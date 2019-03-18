@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>qm-coummunity-pc</title>
+	<link rel="shortcut icon" href="//www.qianmi.com/r/cms/qmwww/default/img/favicon.ico" type="image/x-icon">
+	<script type="text/javascript" src="//pic.qianmi.com/jslib/jquery/jquery-1.10.2.min.js"></script>
+	<script src="https://cdn.ravenjs.com/3.26.2/raven.min.js" crossorigin="anonymous"></script>
+
+	<script>
+		Raven.config('https://982b8081c83449c79ef7328049050a78@sentry.qianmi.com/5', {
+			dataCallback: function (data) {
+				data.request.url = data.request.url.replace('/#/', "/a/b/c")
+				return data;
+			}
+		}).install()
+	</script>
+
+	<globalScript/>
+</head>
+
+<body class="body-overflow-y">
+	<div id="react-content"></div>
+	<script type="text/javascript" src="/webpack-dev-server.js"></script>
+</body>
+
+</html>

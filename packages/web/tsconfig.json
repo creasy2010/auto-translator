@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "sourceMap": false,
+    "module": "es6",
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "baseUrl": "../../..",
+    "rootDirs": [
+      "src"
+    ],
+    "outDir": "./build/",
+    "lib": [
+      "es2015",
+      "es2015.promise",
+      "es7",
+      "es2017",
+      "dom"
+    ]
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "../../../node_modules"
+  ]
+}
