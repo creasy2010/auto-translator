@@ -37,3 +37,7 @@
 
 第一次发布版本号, @qianmi/qm-self-order-api@1.2.47-RELEASE, 后面再发布会追加尾号@qianmi/qm-self-order-api@1.2.47-RELEASE-1
 
+
+### 提示:"`?
+
+目前只能一个任务在翻译,所以当两个人冲突时,后者会得到这个提示; 等任务结束 再提交即可.
